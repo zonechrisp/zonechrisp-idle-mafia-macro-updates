@@ -1,20 +1,16 @@
-import base64
 import ctypes
 import importlib.util
 import os
 import sys
-from io import BytesIO
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageTk
 import customtkinter as ctk
-import tkinter as tk
 
 APP_VERSION = "14.1.0"
 THIS_DIR = Path(__file__).resolve().parent
 ROOT = Path(os.environ.get("IDLE_MAFIA_ROOT", str(THIS_DIR.parent.parent))).resolve()
 BASE_DIR = ROOT / "versions" / "14.0.0"
-ICON_B64_PATH = THIS_DIR / "app_icon.b64"
 
 
 def _set_app_id():
@@ -45,13 +41,31 @@ def _all_widgets(widget):
         yield from _all_widgets(child)
 
 
+def _make_icon():
+    s = 128
+    img = Image.new("RGBA", (s, s), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((4, 4, 124, 124), radius=27, fill=(15, 18, 21, 255), outline=(255, 65, 65, 255), width=4)
+    d.rounded_rectangle((9, 9, 119, 119), radius=23, outline=(110, 20, 24, 180), width=2)
+    d.ellipse((33, 23, 95, 49), fill=(20, 22, 25, 255))
+    d.polygon([(43, 36), (49, 17), (79, 17), (88, 37)], fill=(24, 26, 29, 255))
+    d.rectangle((48, 30, 84, 35), fill=(240, 45, 52, 255))
+    d.polygon([(47, 48), (81, 48), (94, 72), (77, 74), (64, 58), (50, 74), (33, 72)], fill=(10, 12, 14, 255))
+    red = (238, 42, 49, 255)
+    d.polygon([(24, 65), (43, 65), (64, 85), (85, 65), (104, 65), (104, 107), (88, 107), (88, 84), (64, 106), (40, 84), (40, 107), (24, 107)], fill=red)
+    d.ellipse((48, 72, 80, 104), outline=(255, 77, 77, 255), width=4)
+    for xy in [((64, 66), (64, 75)), ((64, 101), (64, 111)), ((42, 88), (51, 88)), ((77, 88), (87, 88))]:
+        d.line(xy, fill=(255, 87, 87, 255), width=4)
+    d.polygon([(58, 78), (58, 99), (64, 94), (70, 104), (75, 101), (69, 91), (78, 90)], fill=(245, 247, 249, 255), outline=(180, 185, 190, 255))
+    return img
+
+
 def _apply_icon(app):
     try:
-        b64 = ICON_B64_PATH.read_text(encoding="ascii").strip()
-        app._v141_icon_photo = tk.PhotoImage(data=b64)
+        pil = _make_icon()
+        app._v141_icon_photo = ImageTk.PhotoImage(pil.resize((64, 64), Image.Resampling.LANCZOS))
         app.iconphoto(True, app._v141_icon_photo)
         app.wm_iconphoto(True, app._v141_icon_photo)
-        pil = Image.open(BytesIO(base64.b64decode(b64))).convert("RGBA")
         app._v141_brand_image = ctk.CTkImage(light_image=pil, dark_image=pil, size=(42, 42))
         for widget in _all_widgets(app):
             if isinstance(widget, ctk.CTkLabel):
