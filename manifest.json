@@ -16,23 +16,10 @@
         "This is a lightweight visual micro-update; macro and detector behavior are unchanged."
       ],
       "requirements": [],
-      "files": [
-        {
-          "path": "main.py",
-          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/main.py",
-          "sha256": "7297b501c49d1f3f69919238d1a2aa5cb39c4145a9f6eaf743e4a18ab62f8237"
-        },
-        {
-          "path": "update_center.py",
-          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/update_center.py",
-          "sha256": "2023b79cb2c168a82b3cf9eb889954cb5a1888c44c5485a23006b107a63865fb"
-        },
-        {
-          "path": "version.json",
-          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/version.json",
-          "sha256": "2ea77f5b0de2e8451868777bb2ebd81679ad46a3341e0da561d5ddf2a678e04c"
-        }
-      ]
+      "package_b64_chunks": [
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.1.0/part01.b64"
+      ],
+      "package_sha256": "b06cdc46afd83279fab2297d88b927b4fb645009d0e5a6966db07bc51ceb88cf"
     },
     {
       "version": "14.0.0",
