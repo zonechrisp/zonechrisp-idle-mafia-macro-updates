@@ -1,5 +1,17 @@
 # Changelog
 
+## v17.1.0 — Smart Vision & Popup Recovery
+Released: 2026-09-07
+
+- Added per-slot **Popup Recovery** for confirmation dialogs and other interruptions. Each of the 10 slots can upload its own popup image, select a popup detection area, record a recovery/confirm macro, test it, and enable or disable it independently.
+- When a popup is recognized, normal slot playback is paused, the recorded popup action runs once, and the slot resumes. A cooldown prevents repeated confirmation spam, and a short post-slot watch catches dialogs that appear slightly late.
+- Reworked **CUSTOM target recognition** into a three-channel Smart Vision score: **50% grayscale structure**, **30% full-colour appearance**, and **20% edge/text-shape detail**.
+- Added scale-tolerant target recognition with a default **±6%** size tolerance so small Roblox UI scaling differences are less likely to cause missed detections.
+- Added configurable Smart Vision match threshold and scale-tolerance controls, plus clearer test/detection diagnostics showing structure, colour, edge/text and scale information.
+- Text inside a target image is recognized visually from its letter shapes and edges. v17.1 does **not** use semantic OCR, so it matches what the lettering looks like rather than reading and understanding the word.
+- Refreshed the UI into a newer **Automation Studio** layout with cleaner cards, stronger visual hierarchy, modern cyan/pink accents, refreshed status states, and clearer target/popup setup guidance.
+- Retained **10 sequence slots**, optional keyboard recording, the v15 Low-Impact Game Engine, per-slot rare deactivation, and the v16.2 in-app recording countdown.
+
 ## v17.0.0 — Universal Roblox Target Engine
 Released: 2026-09-07
 
