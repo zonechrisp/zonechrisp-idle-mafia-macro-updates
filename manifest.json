@@ -20,7 +20,7 @@
         {
           "path": "main.py",
           "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/main.py",
-          "sha256": "2b24cf1279b6f1053ec5b180afef0a0e9621f6a111219371610cd612f6fad7f5"
+          "sha256": "7297b501c49d1f3f69919238d1a2aa5cb39c4145a9f6eaf743e4a18ab62f8237"
         },
         {
           "path": "update_center.py",
@@ -31,11 +31,6 @@
           "path": "version.json",
           "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/version.json",
           "sha256": "2ea77f5b0de2e8451868777bb2ebd81679ad46a3341e0da561d5ddf2a678e04c"
-        },
-        {
-          "path": "app_icon.b64",
-          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/app_icon.b64",
-          "sha256": "6b144d04ecbb633491388c94e685062ac637a04fb41be4cf641a3c9e7fe89610"
         }
       ]
     },
