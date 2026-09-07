@@ -1,9 +1,28 @@
 {
   "schema_version": 1,
   "app": "Idle Mafia Precision Mouse Macro",
-  "latest_stable": "16.0.0",
+  "latest_stable": "16.1.0",
   "latest_beta": null,
   "versions": [
+    {
+      "version": "16.1.0",
+      "channel": "stable",
+      "released": "2026-09-07",
+      "title": "Visible Recording Countdown",
+      "notes": [
+        "Added a visible on-screen countdown before mouse recording begins, so the exact capture start is no longer ambiguous.",
+        "The countdown updates in tenths of a second and changes to LIVE only after the mouse listener and recording-stop hotkey are active.",
+        "The countdown overlay is topmost, non-activating and click-through on Windows so it does not steal focus or input from Roblox.",
+        "The overlay disappears shortly after recording starts and works for both legacy single-macro recording and all five Sequence Mode macro slots.",
+        "The existing configurable record countdown duration is respected; the default remains 2 seconds.",
+        "Sequence logic, v15 Low-Impact Game Engine, exact absolute mouse coordinates, rarity detection and saved recordings are unchanged."
+      ],
+      "requirements": [],
+      "package_b64_chunks": [
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/16.1.0/part01.b64"
+      ],
+      "package_sha256": "a44b644f1d81f9aaf1676b448468a1100995b54e68c32a416489bd00e4759b0a"
+    },
     {
       "version": "16.0.0",
       "channel": "stable",
