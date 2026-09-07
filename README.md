@@ -1,14 +1,14 @@
 # Roblox Auto Roll Selector — Update Feed
 
-This repository is the public update feed used by the app's **Update Center**. The repository name is legacy from the app's original Idle Mafia-only versions; the current app is now universal for Roblox games.
+This repository is the public update feed used by the app's **Update Center**. The repository name is legacy from the app's original Idle Mafia-only versions; the current app is universal for Roblox games.
 
 ## Current stable release
-**v17.0.0 — Universal Roblox Target Engine**
+**v17.1.0 — Smart Vision & Popup Recovery**
 
-v17 adds user-uploaded visual target templates, optional keyboard recording, and up to 10 independent sequence slots while retaining the low-impact playback engine and existing rollback system.
+v17.1 adds per-slot popup recovery, a stronger custom-target vision stack that combines structure, colour and text/edge appearance, scale-tolerant matching, and a refreshed Automation Studio interface. It retains the 10-slot sequence engine, mouse + keyboard macro recording, and the low-impact Roblox playback engine.
 
 - `manifest.json` tells installed clients which versions are available.
-- `packages/<version>/` contains packaged update data.
+- `packages/<version>/` contains the Base64-chunked update package used by the in-app updater.
 - `CHANGELOG.md` contains the human-readable release history.
 
-The updater verifies SHA-256 hashes before installing downloaded files. App versions are installed side-by-side so an older published version can be selected again from the Update Center, while settings, macros, uploaded target images, and sequence data remain in shared app data.
+The updater concatenates the declared package chunks, decodes the ZIP, and verifies its SHA-256 hash before installation. App versions are installed side-by-side while settings, macros, uploaded target images, popup handlers, and sequence data remain in shared app data.
