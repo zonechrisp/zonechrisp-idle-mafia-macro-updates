@@ -1,13 +1,14 @@
-# Idle Mafia Precision Mouse Macro — Update Feed
+# Roblox Auto Roll Selector — Update Feed
 
-This repository is the public update feed used by the app's **Update Center**.
+This repository is the public update feed used by the app's **Update Center**. The repository name is legacy from the app's original Idle Mafia-only versions; the current app is now universal for Roblox games.
 
 ## Current stable release
-**v14.1.0 — App Icon Micro Update**
+**v17.0.0 — Universal Roblox Target Engine**
+
+v17 adds user-uploaded visual target templates, optional keyboard recording, and up to 10 independent sequence slots while retaining the low-impact playback engine and existing rollback system.
 
 - `manifest.json` tells installed clients which versions are available.
-- `releases/<version>/` contains lightweight version files for newer updates.
-- `packages/<version>/` contains packaged update data for older/full releases.
+- `packages/<version>/` contains packaged update data.
 - `CHANGELOG.md` contains the human-readable release history.
 
-The updater verifies SHA-256 hashes before installing downloaded files. App versions are installed side-by-side so an older published version can be selected again from the Update Center, while settings, recordings, and analytics remain in shared app data.
+The updater verifies SHA-256 hashes before installing downloaded files. App versions are installed side-by-side so an older published version can be selected again from the Update Center, while settings, macros, uploaded target images, and sequence data remain in shared app data.
