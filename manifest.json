@@ -1,9 +1,33 @@
 {
   "schema_version": 1,
   "app": "Idle Mafia Precision Mouse Macro",
-  "latest_stable": "14.1.1",
+  "latest_stable": "15.0.0",
   "latest_beta": null,
   "versions": [
+    {
+      "version": "15.0.0",
+      "channel": "stable",
+      "released": "2026-09-07",
+      "title": "Low-Impact Game Engine",
+      "notes": [
+        "Added Game Compatibility Mode to reduce CPU, GPU, and input overhead while Roblox is running.",
+        "Reduced detector load from the old ~83 scans/sec default to about 33 scans/sec in compatibility mode and lowered the detector thread priority.",
+        "Capped generated smooth movement at 120 Hz in compatibility mode, re-enabled Windows movement coalescing, and removed redundant generated movement events.",
+        "Reworked high-precision timing so the app sleeps for most waits instead of continuously yielding/spinning near every mouse event.",
+        "Improved click reliability with a configurable hover-settle delay and minimum mouse-button hold time so Roblox has time to register hover and clicks.",
+        "Reduced UI animation, analytics, logging, callbacks, and sound work while a macro is actively replaying.",
+        "OpenCV now uses one CPU thread and disables OpenCL for the small rarity-detection crop to reduce contention with the game.",
+        "Existing recorded absolute mouse anchors, rare-stop behavior, settings, recordings, and version rollback remain compatible."
+      ],
+      "requirements": [],
+      "package_b64_chunks": [
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/15.0.0/part01a.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/15.0.0/part01b.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/15.0.0/part02.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/15.0.0/part03.b64"
+      ],
+      "package_sha256": "9e301d30841ec8ac1942982e174046874fc757ed8f181e687ae03b09692bd842"
+    },
     {
       "version": "14.1.1",
       "channel": "stable",
