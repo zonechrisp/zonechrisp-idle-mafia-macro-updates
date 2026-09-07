@@ -1,14 +1,21 @@
 # Roblox Auto Roll Selector — Update Feed
 
-This repository is the public update feed used by the app's **Update Center**. The repository name is legacy from the app's original Idle Mafia-only versions; the current app is universal for Roblox games.
+This repository is the public update feed used by the app's **Update Center**. The repository name is legacy from the original Idle Mafia-only versions; the current app is designed for Roblox roll/selection workflows more generally.
 
-## Current stable release
-**v17.1.0 — Smart Vision & Popup Recovery**
+## Release channels
 
-v17.1 adds per-slot popup recovery, a stronger custom-target vision stack that combines structure, colour and text/edge appearance, scale-tolerant matching, and a refreshed Automation Studio interface. It retains the 10-slot sequence engine, mouse + keyboard macro recording, and the low-impact Roblox playback engine.
+**Stable: v16.2.0 — In-App Recording Countdown**
 
-- `manifest.json` tells installed clients which versions are available.
-- `packages/<version>/` contains the Base64-chunked update package used by the in-app updater.
+v16.2.0 is intentionally the only Stable release.
+
+**Beta: v17.1.1 — Purple UI & Scroll Stability**
+
+The Beta line contains the universal Roblox features: custom Smart Vision templates, mouse + keyboard macro recording, 10 sequence slots, Popup Recovery, and the newer interface. v17.1.1 also fixes scroll rendering artifacts, adds the purple branding, removes Analytics, and expands Help & Guide.
+
+Users on v17.x should select **Beta** in the Update Center to receive newer v17 releases. Stable shows only v16.2.0.
+
+- `manifest.json` tells installed clients which versions and channels are available.
+- `packages/<version>/` contains Base64-chunked update packages used by the in-app updater.
 - `CHANGELOG.md` contains the human-readable release history.
 
-The updater concatenates the declared package chunks, decodes the ZIP, and verifies its SHA-256 hash before installation. App versions are installed side-by-side while settings, macros, uploaded target images, popup handlers, and sequence data remain in shared app data.
+The updater concatenates the declared package chunks, decodes the ZIP, and verifies its SHA-256 hash before installation. App versions are installed side-by-side while settings, macros, uploaded target images, Popup Recovery data, and sequence data remain in shared app data.
