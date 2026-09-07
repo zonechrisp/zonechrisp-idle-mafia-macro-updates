@@ -1,5 +1,14 @@
 # Changelog
 
+## v14.1.1 — Windows Taskbar Icon Fix
+Released: 2026-09-07
+
+- Fixed the app icon not appearing correctly on the Windows taskbar.
+- Set the app's Windows AppUserModelID before Tk creates the application window.
+- Added native `WM_SETICON` handling for both the small and large Windows icons, including the actual root HWND used by the taskbar.
+- Added a multi-size `.ico` fallback generated from the app icon and re-applies it after the window is mapped so Tk/Windows cannot silently replace it.
+- Macro playback, rare detection, recordings, and settings are unchanged.
+
 ## v14.1.0 — App Icon Micro Update
 Released: 2026-09-07
 
