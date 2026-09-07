@@ -17,8 +17,7 @@
       ],
       "requirements": [],
       "package_b64_chunks": [
-        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.1.0/part01.b64",
-        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.1.0/part02.b64"
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.1.0/part01.b64"
       ],
       "package_sha256": "b06cdc46afd83279fab2297d88b927b4fb645009d0e5a6966db07bc51ceb88cf"
     },
