@@ -1,5 +1,18 @@
 # Changelog
 
+## v17.0.0 — Universal Roblox Target Engine
+Released: 2026-09-07
+
+- Renamed the app to **Roblox Auto Roll Selector** and removed Idle Mafia-specific branding from the current interface.
+- Added **custom target-image uploads** so you can detect any visual result in any Roblox game instead of being limited to built-in rarity names.
+- Single-macro mode can use an uploaded PNG, JPG, JPEG, WEBP or BMP target image with the existing selectable detection area and match threshold.
+- Every sequence slot can use its own uploaded **CUSTOM** target image, its own detection area and its own recorded macro.
+- Expanded Sequence Mode from **5 to 10 independent slots**. Existing slots 1–5 migrate forward automatically.
+- Added optional **keyboard recording** alongside mouse recording, preserving key-down/key-up timing and held-key duration while filtering repeated key-down events.
+- Added safe keyboard release when recording/playback stops so held keys cannot remain stuck.
+- Legacy **BOTH / SECRET / MYTHIC** targets remain available for existing Idle Mafia setups.
+- Retained the v15 **Low-Impact Game Engine**, v16 per-slot deactivation behavior and the v16.2 in-app recording countdown.
+
 ## v16.2.0 — In-App Recording Countdown
 Released: 2026-09-07
 
