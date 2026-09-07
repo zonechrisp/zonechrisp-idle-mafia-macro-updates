@@ -1,22 +1,50 @@
 {
   "schema_version": 1,
   "app": "Roblox Auto Roll Selector",
-  "latest_stable": "17.1.0",
-  "latest_beta": null,
+  "latest_stable": "16.2.0",
+  "latest_beta": "17.1.1",
   "versions": [
     {
+      "version": "17.1.1",
+      "channel": "beta",
+      "released": "2026-09-07",
+      "title": "Purple UI & Scroll Stability",
+      "notes": [
+        "Fixed scrolling visual corruption/ghosting by avoiding recursive styling of CTkScrollableFrame internals, stabilizing scroll regions, and reducing decorative redraw work while scrolling.",
+        "Replaced the app and taskbar branding with a new purple target-style logo and purple visual theme.",
+        "Removed the Analytics page and simplified navigation so the main automation workflow is easier to understand.",
+        "Refreshed the interface with cleaner cards, clearer page names, stronger hierarchy, and a sleeker Automation Studio layout.",
+        "Rebuilt Help & Guide with instructions for recording mouse/keyboard macros, Smart Vision templates, thresholds, 10-slot Sequence Mode, Popup Recovery, hotkeys, game compatibility, updates, and troubleshooting.",
+        "Update Center channels were reorganized: v16.2.0 is the only Stable release; v17.x and all other historical releases are Beta.",
+        "Retained Smart Vision, Popup Recovery, optional keyboard recording, 10 sequence slots, per-slot deactivation, and the low-impact playback engine."
+      ],
+      "requirements": [],
+      "package_b64_chunks": [
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part01.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part02.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part03.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part04.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part05.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part06.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part07.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part08.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part09.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part10.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part11.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part12.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.1/part13.b64"
+      ],
+      "package_sha256": "dbd266773b2cfaf165c876d224b50e43096048aec067f1698a6c89a0543953cc"
+    },
+    {
       "version": "17.1.0",
-      "channel": "stable",
+      "channel": "beta",
       "released": "2026-09-07",
       "title": "Smart Vision & Popup Recovery",
       "notes": [
-        "Added per-slot Popup Recovery: upload a confirmation-dialog image, select its screen area, record a confirm/recovery action, and let the slot handle that popup automatically before resuming.",
-        "Popup detection pauses normal slot playback, runs the recorded recovery action once, uses cooldown protection, and continues watching briefly after a slot finishes for delayed dialogs.",
-        "Enhanced custom target recognition with a three-channel Smart Vision score combining grayscale structure, full-colour appearance, and edge/text-shape detail.",
-        "Added scale-tolerant matching for custom targets, with a default plus/minus 6 percent tolerance, a configurable match threshold, and clearer live detection diagnostics.",
-        "Text inside uploaded templates is matched visually from letter shapes and edges; this is visual template recognition rather than semantic OCR.",
-        "Refreshed the interface with a newer Automation Studio dashboard, cleaner cards, modern cyan/pink accents, improved status hierarchy, and clearer setup guidance.",
-        "Retained all 10 sequence slots, optional keyboard recording, v15 Low-Impact Game Engine, per-slot deactivation, and the v16.2 in-app recording countdown."
+        "Added per-slot Popup Recovery for confirmation dialogs and other interruptions.",
+        "Enhanced custom target recognition with structure, full-colour, and edge/text-shape scoring plus scale tolerance.",
+        "Refreshed the Automation Studio interface while retaining 10 slots and keyboard recording."
       ],
       "requirements": [],
       "package_b64_chunks": [
@@ -35,18 +63,13 @@
     },
     {
       "version": "17.0.0",
-      "channel": "stable",
+      "channel": "beta",
       "released": "2026-09-07",
       "title": "Universal Roblox Target Engine",
       "notes": [
-        "Renamed the app to Roblox Auto Roll Selector and removed Idle Mafia-specific branding from the current interface.",
-        "Added custom target-image uploads so you can roll for any visual result in any Roblox game instead of being limited to built-in rarity names.",
-        "Single-macro mode can use an uploaded PNG, JPG, JPEG, WEBP or BMP target image with the existing selectable detection area and match threshold.",
-        "Every sequence slot can use its own uploaded CUSTOM target image, its own detection area and its own recorded macro.",
-        "Expanded Sequence Mode from five to ten independent macro + target-area slots; existing slots 1-5 migrate forward automatically.",
-        "Added optional keyboard recording alongside mouse recording, including key-down/key-up timing, held-key duration, repeat filtering and safe key release when a macro stops.",
-        "Legacy BOTH / SECRET / MYTHIC targets remain available for existing Idle Mafia setups.",
-        "Retained the v15 Low-Impact Game Engine, v16 sequence deactivation behavior and the v16.2 in-app recording countdown."
+        "Renamed the app to Roblox Auto Roll Selector.",
+        "Added user-uploaded visual target templates, optional keyboard recording, and 10 independent sequence slots.",
+        "Legacy SECRET/MYTHIC detection remains available for existing setups."
       ],
       "requirements": [],
       "package_b64_chunks": [
@@ -67,12 +90,9 @@
       "released": "2026-09-07",
       "title": "In-App Recording Countdown",
       "notes": [
-        "Removed the floating recording-countdown overlay that caused issues.",
-        "The app now stays fully visible while a macro recording countdown is running.",
-        "The existing Engine status corner shows REC 2.0s, REC 1.9s and so on in tenths of a second, then changes to RECORDING only when mouse capture is actually live.",
-        "The recording-start confirmation now clearly says the app will stay open during the countdown.",
-        "The in-app countdown works for the normal single-macro recorder and all five Sequence Mode macro slots.",
-        "Sequence logic, v15 Low-Impact Game Engine, exact absolute mouse coordinates, rarity detection and saved recordings are unchanged."
+        "Removed the floating recording countdown overlay that caused issues.",
+        "The app stays visible while recording countdown runs and Engine status shows REC 2.0s through RECORDING.",
+        "Sequence logic and low-impact playback remain unchanged."
       ],
       "requirements": [],
       "package_b64_chunks": [
@@ -86,18 +106,13 @@
     },
     {
       "version": "16.0.0",
-      "channel": "stable",
+      "channel": "beta",
       "released": "2026-09-07",
       "title": "Five-Slot Sequence Engine",
       "notes": [
         "Added Sequence Mode with up to five independent macro + rarity-area pairs.",
-        "Each slot stores its own recorded absolute-coordinate mouse macro, rarity area, enabled state and SECRET / MYTHIC / BOTH target.",
-        "The controller rotates through active slots in order: Macro 1 + Area 1, Macro 2 + Area 2, through Macro 5 + Area 5.",
-        "If a slot detects its selected rarity, only that slot is immediately deactivated and the rest of the sequence continues.",
-        "Rare slot deactivation persists until you manually reactivate that slot, so the next sequence pass automatically skips it.",
-        "Added per-slot Record Macro, Set Rarity Area, Test Detection, Reactivate and Clear controls plus sequence status badges.",
-        "Added configurable pre-check and final-result scan windows so an already-visible rare is protected before a macro can dismiss it and new results get a final detection window.",
-        "The v15 Low-Impact Game Engine, Game Compatibility Mode, exact recorded anchor coordinates, click reliability improvements and legacy single-macro mode are retained."
+        "If a slot detects its target, only that slot deactivates while the rest continue.",
+        "Added per-slot setup controls and pre-check/final-result scan windows."
       ],
       "requirements": [],
       "package_b64_chunks": [
@@ -111,18 +126,13 @@
     },
     {
       "version": "15.0.0",
-      "channel": "stable",
+      "channel": "beta",
       "released": "2026-09-07",
       "title": "Low-Impact Game Engine",
       "notes": [
         "Added Game Compatibility Mode to reduce CPU, GPU, and input overhead while Roblox is running.",
-        "Reduced detector load from the old ~83 scans/sec default to about 33 scans/sec in compatibility mode and lowered the detector thread priority.",
-        "Capped generated smooth movement at 120 Hz in compatibility mode, re-enabled Windows movement coalescing, and removed redundant generated movement events.",
-        "Reworked high-precision timing so the app sleeps for most waits instead of continuously yielding/spinning near every mouse event.",
-        "Improved click reliability with a configurable hover-settle delay and minimum mouse-button hold time so Roblox has time to register hover and clicks.",
-        "Reduced UI animation, analytics, logging, callbacks, and sound work while a macro is actively replaying.",
-        "OpenCV now uses one CPU thread and disables OpenCL for the small rarity-detection crop to reduce contention with the game.",
-        "Existing recorded absolute mouse anchors, rare-stop behavior, settings, recordings, and version rollback remain compatible."
+        "Reduced detector/input scheduling load and improved click reliability.",
+        "Existing recordings and rarity stop behavior remain compatible."
       ],
       "requirements": [],
       "package_b64_chunks": [
@@ -135,15 +145,12 @@
     },
     {
       "version": "14.1.1",
-      "channel": "stable",
+      "channel": "beta",
       "released": "2026-09-07",
       "title": "Windows Taskbar Icon Fix",
       "notes": [
         "Fixed the app icon not appearing correctly on the Windows taskbar.",
-        "The app now sets its Windows AppUserModelID before Tk creates the window.",
-        "Added native WM_SETICON handling for both small and large window icons, including the true root HWND.",
-        "Added a generated multi-size ICO fallback and repeats the native icon assignment after the window is mapped to prevent Tk or Windows from replacing it.",
-        "Macro playback, rare detection, recordings, and settings are unchanged."
+        "Added native Windows icon handling and a generated multi-size ICO fallback."
       ],
       "requirements": [],
       "package_b64_chunks": [
@@ -153,14 +160,12 @@
     },
     {
       "version": "14.1.0",
-      "channel": "stable",
+      "channel": "beta",
       "released": "2026-09-07",
       "title": "App Icon Micro Update",
       "notes": [
-        "Added a custom app icon designed for the Idle Mafia Precision Mouse Macro.",
-        "The icon now appears in the Windows app window and replaces the IM sidebar badge.",
-        "Updated the app title to show the full version number 14.1.0.",
-        "This is a lightweight visual micro-update; macro and detector behavior are unchanged."
+        "Added a custom app icon and updated window/sidebar branding.",
+        "Macro playback and detection behavior were unchanged."
       ],
       "requirements": [],
       "package_b64_chunks": [
@@ -170,16 +175,12 @@
     },
     {
       "version": "14.0.0",
-      "channel": "stable",
+      "channel": "beta",
       "released": "2026-09-07",
       "title": "Update Center",
       "notes": [
-        "Added an in-app Update Center with automatic update checks.",
-        "Update popup now offers Update Now, View Changes, or Later.",
-        "Added full version history with one-click switching and rollback.",
-        "App versions are installed side-by-side while settings and macro recordings stay in shared data.",
-        "Every downloaded update package is verified with SHA-256 before installation.",
-        "Added Stable/Beta update channel preference for future releases."
+        "Added the in-app Update Center, version history, side-by-side installations, and SHA-256 verification.",
+        "Added Stable/Beta channel selection and rollback support."
       ],
       "requirements": [],
       "package_b64_chunks": [
