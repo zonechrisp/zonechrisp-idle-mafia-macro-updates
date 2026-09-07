@@ -25,7 +25,8 @@
         "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part03.b64",
         "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part04.b64",
         "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part05.b64",
-        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part06.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part06a.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part06b.b64",
         "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part07.b64",
         "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part08.b64",
         "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/17.1.0/part09.b64"
@@ -140,7 +141,7 @@
       "notes": [
         "Fixed the app icon not appearing correctly on the Windows taskbar.",
         "The app now sets its Windows AppUserModelID before Tk creates the window.",
-        "Added native WM_SETICON handling for both the small and large window icons, including the true root HWND.",
+        "Added native WM_SETICON handling for both small and large window icons, including the true root HWND.",
         "Added a generated multi-size ICO fallback and repeats the native icon assignment after the window is mapped to prevent Tk or Windows from replacing it.",
         "Macro playback, rare detection, recordings, and settings are unchanged."
       ],
