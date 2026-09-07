@@ -1,9 +1,44 @@
 {
   "schema_version": 1,
   "app": "Idle Mafia Precision Mouse Macro",
-  "latest_stable": "14.0.0",
+  "latest_stable": "14.1.0",
   "latest_beta": null,
   "versions": [
+    {
+      "version": "14.1.0",
+      "channel": "stable",
+      "released": "2026-09-07",
+      "title": "App Icon Micro Update",
+      "notes": [
+        "Added a custom app icon designed for the Idle Mafia Precision Mouse Macro.",
+        "The icon now appears in the Windows app window and replaces the IM sidebar badge.",
+        "Updated the app title to show the full version number 14.1.0.",
+        "This is a lightweight visual micro-update; macro and detector behavior are unchanged."
+      ],
+      "requirements": [],
+      "files": [
+        {
+          "path": "main.py",
+          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/main.py",
+          "sha256": "2b24cf1279b6f1053ec5b180afef0a0e9621f6a111219371610cd612f6fad7f5"
+        },
+        {
+          "path": "update_center.py",
+          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/update_center.py",
+          "sha256": "2023b79cb2c168a82b3cf9eb889954cb5a1888c44c5485a23006b107a63865fb"
+        },
+        {
+          "path": "version.json",
+          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/version.json",
+          "sha256": "2ea77f5b0de2e8451868777bb2ebd81679ad46a3341e0da561d5ddf2a678e04c"
+        },
+        {
+          "path": "app_icon.b64",
+          "url": "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/releases/14.1.0/app_icon.b64",
+          "sha256": "ecbbd1484f06a8e8f8595565995b19fcbd1731e3ceff50750e900d329dd5c595"
+        }
+      ]
+    },
     {
       "version": "14.0.0",
       "channel": "stable",
