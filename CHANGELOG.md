@@ -1,42 +1,44 @@
 # Changelog
 
+## v17.1.3 — Alpha Legacy Archive
+Released: 2026-09-08
+Channel: Stable
+
+- Added **Alpha** as a third Update Center channel.
+- Added the genuine archived **v1–v13** builds as selectable historical releases.
+- Alpha builds install and open as one-time legacy sessions without replacing the selected Stable version.
+- Added SHA-256 verification for the shared legacy archive and safe selective extraction that rejects path traversal, links and device entries.
+- Stable and Beta continue using the modern side-by-side update system and shared app data.
+
 ## v17.1.2 — Popup Recovery v3 & Runtime Audit
 Released: 2026-09-07
-Channel: Beta
+Channel: Stable
 
 - Fixed **Popup Recovery across all 10 Sequence slots**. Every slot now uses an isolated runtime context containing that slot’s popup image, popup area and recovery macro.
 - Added slot-safe routing: if a popup belonging to Slot 7 is detected, Slot 7’s recovery macro runs even if another slot is about to start.
-- Reworked the popup watcher for **short-lived dialogs**. It scans at a fast low-CPU cadence, can trigger immediately on a very strong single-frame match, and uses a short confirmation window for borderline matches.
-- Improved popup matching accuracy by finding the dialog from grayscale structure first, then checking colour and text/edge detail at that **same matched location** instead of letting each channel match a different part of the screen.
-- Precomputes scale-tolerant popup templates and skips expensive colour/edge checks on obvious non-matches, keeping detection responsive without bringing back the old Roblox lag problem.
-- Added a **cross-slot safety sweep** before each sequence macro to catch delayed confirmation dialogs left behind by any configured slot.
-- Popup Detection Test now samples a short burst of frames and reports the peak score, which is more representative for fast or animated popups than a single screenshot.
-- Added a 10-slot Popup Recovery preflight at sequence start for missing files/configuration and display-layout mismatches in recorded recovery actions.
-- Runtime audit completed: both Python files compile, the 10-slot popup configuration/matcher path was exercised with synthetic dialogs, slot-specific action routing was verified, and the release ZIP passed integrity testing.
-- **Stable remains v16.2.0. v17.1.2 is Beta.**
+- Reworked the popup watcher for **short-lived dialogs** with faster low-CPU scanning and strong single-frame triggering.
+- Improved popup matching by evaluating structure, colour and text/edge evidence at the same matched location.
+- Added a cross-slot safety sweep, popup preflight checks and burst-based detection testing.
+- Completed a runtime/package audit and promoted v17.1.2 to Stable.
 
 ## v17.1.1 — Purple UI & Scroll Stability
 Released: 2026-09-07
 Channel: Beta
 
-- Fixed the scroll rendering/ghosting issue that could make cards and controls overlap or leave visual artifacts after scrolling up and down.
-- Stopped recursively restyling `CTkScrollableFrame` internals, stabilized scroll-region updates, and temporarily reduces decorative redraws during active scrolling.
-- Replaced the red branding with a new purple target-style app/taskbar logo and a purple visual system.
-- Removed the Analytics page and simplified the sidebar/navigation.
-- Refined the Automation Studio interface with cleaner cards, clearer page names, stronger hierarchy, and less visual clutter.
-- Rebuilt **Help & Guide** with instructions for mouse + keyboard recording, Smart Vision custom targets, thresholds, scale tolerance, the 10-slot sequence, Popup Recovery, hotkeys, Game Compatibility Mode, updates, and troubleshooting.
-- Reorganized release channels: **v16.2.0 is the only Stable release**. v17.1.1, all v17 releases, and all other historical releases are now in the **Beta** channel.
-- Retained Smart Vision, Popup Recovery, keyboard recording, 10 sequence slots, per-slot target deactivation, and the low-impact Roblox playback engine.
+- Fixed the scroll rendering/ghosting issue that could make cards and controls overlap or leave visual artifacts after scrolling.
+- Stopped recursively restyling `CTkScrollableFrame` internals and stabilized scroll-region updates.
+- Replaced the red branding with a purple target-style app/taskbar logo and visual system.
+- Removed Analytics, simplified navigation and rebuilt Help & Guide.
+- Retained Smart Vision, Popup Recovery, keyboard recording, 10 sequence slots, per-slot target deactivation and the low-impact Roblox playback engine.
 
 ## v17.1.0 — Smart Vision & Popup Recovery
 Released: 2026-09-07
 Channel: Beta
 
 - Added per-slot Popup Recovery for confirmation dialogs and other interruptions.
-- Added Smart Vision custom target recognition combining grayscale structure, colour appearance, and edge/text-shape detail.
+- Added Smart Vision custom target recognition combining grayscale structure, colour appearance and edge/text-shape detail.
 - Added scale-tolerant custom image matching and configurable match threshold controls.
-- Text in templates is matched visually; this is template recognition rather than semantic OCR.
-- Retained 10 sequence slots, keyboard recording, and the low-impact engine.
+- Retained 10 sequence slots, keyboard recording and the low-impact engine.
 
 ## v17.0.0 — Universal Roblox Target Engine
 Released: 2026-09-07
@@ -49,7 +51,7 @@ Channel: Beta
 
 ## v16.2.0 — In-App Recording Countdown
 Released: 2026-09-07
-Channel: Stable
+Channel: Beta
 
 - The app stays visible while a macro recording countdown is running.
 - Engine status shows the countdown directly and changes to **RECORDING** only when capture is live.
@@ -85,9 +87,22 @@ Channel: Beta
 Released: 2026-09-07
 Channel: Beta
 
-- Added the in-app Update Center, SHA-256 verification, side-by-side versions, Stable/Beta channels, and rollback support.
+- Added the in-app Update Center, SHA-256 verification, side-by-side versions, Stable/Beta channels and rollback support.
 
-## v13
+## Alpha legacy archive — v1–v13
 
-- Added configurable SECRET / MYTHIC / BOTH stop conditions.
-- Added precision playback and rare-detection improvements.
+These historical builds now appear individually in the **Alpha** channel.
+
+- **v13 — Selectable Rare Stop & Smooth Engine:** selectable BOTH, SECRET-only or MYTHIC-only stopping plus smoother precision playback.
+- **v12 — Precision Mouse Recorder:** direct precision mouse recording and low-level Windows playback.
+- **v11 — Dark Dashboard & Analytics:** introduced the dark multi-page dashboard and analytics/activity logging.
+- **v10 — Automatic Python Setup:** added automatic Python setup while retaining the Razer Play Once controller.
+- **v9 — Razer Play Once Controller:** switched from toggle control to one-shot Synapse playback decisions.
+- **v8 — Razer Synapse Rare-Stop Toggle:** dedicated SECRET/MYTHIC detector that stops a Synapse toggle macro.
+- **v7 — Recorded Mouse Macro:** added real mouse movement/click recording with background rarity detection.
+- **v6 — Low-Level Click Guard:** added smooth low-level clicking, cursor verification and a visual button guard.
+- **v5 — Confirm Flow & Roblox Hover Fix:** added Roll → Dismiss → Confirm flow and Roblox hover-state handling.
+- **v4 — Dismiss Flow & Global Hotkeys:** added the Dismiss flow plus global F6/F7 controls.
+- **v3 — Normal Roll Macro:** moved rolling into the app instead of relying on an in-game Auto Roll button.
+- **v2 — Safer Rare Stop:** tuned SECRET/MYTHIC detection and consecutive-frame confirmation.
+- **v1 — Auto-Roll Watcher:** original screen watcher with colour/template rare detection and pre-roll safety checks.
