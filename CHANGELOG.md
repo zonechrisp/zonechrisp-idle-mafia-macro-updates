@@ -1,5 +1,17 @@
 # Changelog
 
+## v16.1.0 — Visible Recording Countdown
+Released: 2026-09-07
+
+- Added a visible on-screen countdown before mouse recording begins.
+- The countdown updates in tenths of a second so you no longer have to guess when the 2-second delay ends.
+- The overlay changes to **LIVE** only after the mouse listener and recording-stop hotkey are actually active.
+- The countdown window is topmost, non-activating and click-through on Windows, so it does not steal focus or mouse input from Roblox.
+- The overlay automatically disappears shortly after recording begins.
+- Works for the legacy single macro recorder and all five Sequence Mode macro slots.
+- The existing **Record countdown (s)** setting is still respected; default remains 2 seconds.
+- Sequence behavior, v15 Low-Impact Game Engine, exact absolute mouse coordinates, rarity detection and saved recordings are unchanged.
+
 ## v16.0.0 — Five-Slot Sequence Engine
 Released: 2026-09-07
 
