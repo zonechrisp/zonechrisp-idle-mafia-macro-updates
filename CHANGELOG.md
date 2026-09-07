@@ -1,5 +1,19 @@
 # Changelog
 
+## v16.0.0 — Five-Slot Sequence Engine
+Released: 2026-09-07
+
+- Added **Sequence Mode** with up to five independent macro + rarity-area pairs.
+- Each slot now has its own exact recorded mouse macro, rarity region, enabled state, and **BOTH / SECRET / MYTHIC** stop target.
+- The engine rotates through active slots in order: Slot 1 → Slot 2 → Slot 3 → Slot 4 → Slot 5.
+- If a slot detects its selected rare, only that slot is immediately stopped and deactivated; all other slots continue.
+- Auto-deactivated slots stay disabled across future passes until **Reactivate** is used.
+- Added per-slot **Record Macro**, **Set rarity area**, **Test detection**, **Reactivate**, **Clear**, and live status controls.
+- Added configurable **pre-check** and **final result scan** windows for safer rare protection.
+- Sequence macros are stored independently in shared app data and survive app version updates/rollback.
+- Retained the v15 **Low-Impact Game Engine**, Game Compatibility Mode, exact absolute-coordinate recording, input coalescing, CPU-saving scheduler, and click reliability fixes.
+- Legacy single-macro mode remains available.
+
 ## v15.0.0 — Low-Impact Game Engine
 Released: 2026-09-07
 
