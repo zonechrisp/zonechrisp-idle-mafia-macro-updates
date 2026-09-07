@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "app": "Idle Mafia Precision Mouse Macro",
+  "latest_stable": "14.0.0",
+  "latest_beta": null,
+  "versions": [
+    {
+      "version": "14.0.0",
+      "channel": "stable",
+      "released": "2026-09-07",
+      "title": "Update Center",
+      "notes": [
+        "Added an in-app Update Center with automatic update checks.",
+        "Update popup now offers Update Now, View Changes, or Later.",
+        "Added full version history with one-click switching and rollback.",
+        "App versions are installed side-by-side while settings and macro recordings stay in shared data.",
+        "Every downloaded update package is verified with SHA-256 before installation.",
+        "Added Stable/Beta update channel preference for future releases."
+      ],
+      "requirements": [],
+      "package_b64_chunks": [
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.0.0/part01.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.0.0/part02.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.0.0/part03.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.0.0/part04.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.0.0/part05.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.0.0/part06.b64",
+        "https://raw.githubusercontent.com/zonechrisp/zonechrisp-idle-mafia-macro-updates/main/packages/14.0.0/part07.b64"
+      ],
+      "package_sha256": "3dc6a292aa2517f080dc1ab9ff91d8a99bd5ca658e47d15004d86e9f39e41cc6"
+    }
+  ]
+}
