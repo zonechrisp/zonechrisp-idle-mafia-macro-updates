@@ -4,18 +4,23 @@ This repository is the public update feed used by the app's **Update Center**. T
 
 ## Release channels
 
-**Stable: v16.2.0 — In-App Recording Countdown**
+**Stable: v17.1.3 — Alpha Legacy Archive**
 
-v16.2.0 remains intentionally the only Stable release.
+v17.1.3 adds the third Update Center channel and keeps the modern app as the normal Stable experience.
 
-**Beta: v17.1.2 — Popup Recovery v3 & Runtime Audit**
+**Beta: modern preview/history**
 
-v17.1.2 hardens the universal Beta line: Popup Recovery is isolated and verified across all 10 sequence slots, fast dialogs are scanned at a higher low-CPU cadence, matching aligns structure/colour/text-edge evidence to the same location, and delayed dialogs get a cross-slot safety sweep. Smart Vision targets, mouse + keyboard recording, 10 slots and the purple interface remain included.
+Beta contains modern v14+ releases and continues to include Stable releases in the Update Center.
 
-Users on v17.x should select **Beta** in the Update Center to receive newer v17 releases. Stable shows only v16.2.0.
+**Alpha: genuine historical v1–v13 builds**
 
-- `manifest.json` tells installed clients which versions and channels are available.
-- `packages/<version>/` contains Base64-chunked update packages used by the in-app updater.
+Alpha is the pre-v14 legacy archive. Selecting a v1–v13 entry installs and opens that historical build as a **one-time legacy session**. It does not replace the selected Stable version; after closing the legacy build, reopening `RUN_APP.bat` returns to the modern Stable app.
+
+The v1–v13 builds are stored in one shared legacy archive. The updater verifies its SHA-256 checksum, rejects unsafe archive paths/links/devices, and extracts only the selected version. Historical builds keep their original generation-specific behavior and dependencies.
+
+- `manifest.json` declares Stable, Beta and Alpha releases.
+- `packages/<version>/` contains Base64-chunked modern update packages.
+- `packages/alpha-legacy-v1-v13/` contains the shared historical archive chunks.
 - `CHANGELOG.md` contains the human-readable release history.
 
-The updater concatenates the declared package chunks, decodes the ZIP, and verifies its SHA-256 hash before installation. App versions are installed side-by-side while settings, macros, uploaded target images, Popup Recovery data and sequence data remain in shared app data.
+Modern update packages are concatenated, Base64-decoded and SHA-256 verified before installation. Modern versions remain side-by-side while current settings, macros, uploaded target images, Popup Recovery data and sequence data stay in shared app data.
