@@ -2,8 +2,12 @@
 
 This repository is the public update feed used by the app's **Update Center**.
 
+## Current stable release
+**v14.1.0 — App Icon Micro Update**
+
 - `manifest.json` tells installed clients which versions are available.
-- `packages/<version>/` contains the versioned update package data.
+- `releases/<version>/` contains lightweight version files for newer updates.
+- `packages/<version>/` contains packaged update data for older/full releases.
 - `CHANGELOG.md` contains the human-readable release history.
 
-The updater downloads the package listed in the manifest, reconstructs it locally, and verifies its SHA-256 checksum before it can be installed. App versions are installed side-by-side so an older published version can be selected again from the Update Center.
+The updater verifies SHA-256 hashes before installing downloaded files. App versions are installed side-by-side so an older published version can be selected again from the Update Center, while settings, recordings, and analytics remain in shared app data.
