@@ -1,5 +1,19 @@
 # Changelog
 
+## v17.2.0 — Smooth Navigation & Macro Library
+Released: 2026-09-08
+Channel: Beta
+
+- Replaced canvas pixel scrolling with a stationary clipped viewport to address repeated-button trails and stale page areas.
+- Added a compact 10-slot editor; all enabled slots still run in sequence.
+- Reduced unnecessary status redraws, cached macro statistics and reused update-history cards.
+- Added the supplied photo as a subtle purple-accented sidebar card.
+- Added persistent slot names and a shared named macro library for Recorder, all 10 slots and popup recovery.
+- Added JSON import/export with original timings, coordinates and display metadata preserved; invalid files are rejected before replacement.
+- Saves are atomic and macro replacement is blocked during playback/recording.
+- Existing settings, recordings, target images and popup configuration stay in shared data. Stable remains v17.1.3.
+- Validation: 18 storage/validation tests, existing macro compatibility, real Tk navigation/scroll tests and installation/checksum checks. Roblox automation was not executed in these UI tests.
+
 ## v17.1.3 — Alpha Legacy Archive
 Released: 2026-09-08
 Channel: Stable
